@@ -1,0 +1,87 @@
+/*** BASE STYLES ***/
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    color: #454545;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f8f8f8;
+    background-image: url('bkgd2.png');
+}
+
+.page {
+    /* mobile-- width: 100%; */
+    /* tablet/desktop-- see below */
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/*** HEADER ***/
+
+header {
+    padding: 0.25em 0;
+    text-align: center;
+}
+
+.number-emphasis {
+    font-size: 1.25em;/*update font-size once I've got a better handle on responsive design*/
+    color: rgba(241, 96, 89, 1);
+}
+
+/*** POP-UP MODAL WITH INSTRUCTIONS FOR THE USER ***/
+
+.modal {
+    visibility: hidden;
+}
+
+/*** MAGIC EIGHT BALL OBJECT AND Q&A PROCESSES ***/
+
+.ball, .button {
+    margin: 0 auto;
+    position: relative; /* Why this and does it help with mobile? */
+    /* they had width: 80%; does it fit what I want? */
+}
+
+.ball {
+    padding-bottom: 3em;
+}
+
+.button {
+    padding: 1.5em 0;
+}
+
+#answer {
+    text-align: center;
+    /* the following code is from SkillCrush: */
+    position:absolute;
+    width:14%;
+    top:50%;
+    left:50%;
+    margin-top:-60px;
+    margin-left:-65px;
+    font: 16px 'Open Sans', Helvetica, Arial, sans-serif;
+    color: #222;
+    text-transform: uppercase;
+}
+
+question-btn {
+    /* the following is also from SkillCrush */
+    font: 26px 'Montserrat', Helvetica, Arial, sans-serif;
+    border-radius: 5px;
+    border: none;
+    color: #f8f8f8;
+    background-color: #f16059;
+    padding: 10px 75px;
+    display: block;
+    margin: 0 auto;
+}
+
+/*** FOOTER ***/
+
+footer {
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 0.8em;
+}

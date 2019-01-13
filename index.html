@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Magic Eight Ball</title>
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"> <!-- THIS ALLOWS MOBILE JQUERY TO LOAD -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="page">
+
+        <header>
+            <h1>Magic <span class="number-emphasis">8</span> Ball!!!</h1>
+        </header>
+
+        <div class="modal">
+            <!-- Add directions here. Make sure speak screen can read them and there is an easy escape from the directions for repeat customers (possibly a button that is accessible from keyboard, tab index #1 when modal is "visible" and not accessible when modal is "hidden", with a checkbox that would allow to not show the directions again (how to use cookies?? Would need a cookie disclaimer banner, as well.)) -->
+        </div>
+
+        <div class="ball">
+            <p id="answer" class="response">
+                <!-- Why have a class here that is never used again when there is already an ID? --> 
+                Answer text goes here <!--populate with answer. PS I put the center align in the css instead?-->
+                <!-- Can I add on-long-press read answer for visually-impaired? -->
+                <!-- Can I add Braille output? -->
+            </p>
+            <figure>
+                <img id="magicball" alt="Magic Eight Ball Image" src="https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png">
+                <!-- Make the image responsive so that it can work on mobile, and grow to a max-size on tablet/desktop. -->
+                <!-- Animate shaking side-to-side. Can I add haptic vibrations for visually-impaired? -->
+                <figcaption><!--add caption here--></figcaption>
+            </figure>
+        </div>
+
+        <!-- added padding to top/bottom to provide the space that the breaks would have provided. <br><br> -->
+
+        <div class="button">
+            <button id="question-btn">Ask me anything</button>
+            <!-- Once the project is submitted, change the ball to be what is clicked/button pressed-->
+            <!-- Can I add input field for question? That way hearing-impaired can type the question. Also, can I add a sound for start/stop of inputting the question for visually-impaired? -->
+        </div>
+
+        <footer>
+            <p> <!-- Credits go here --> </p>
+        </footer>
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+    <!-- the page div wrapped around the script - is that needed? -->
+</body>
+</html>
