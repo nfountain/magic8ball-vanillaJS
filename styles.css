@@ -52,6 +52,11 @@ header {
     padding: 1.5em 0;
 }
 
+#question-btn:hover {
+    border: red solid 10px;
+    cursor: pointer;
+}
+
 #answer {
     text-align: center;
     /* the following code is from SkillCrush: */
