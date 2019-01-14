@@ -18,12 +18,12 @@ magicEightBall.provideAnswer = function(question) {
 	answer.innerText = randomAnswer;
 };
 
+// Game function
+
 var askQuestion = function () {
 	question = prompt('Ask me your question');
 	magicEightBall.provideAnswer(question);
 };
-
-//magicEightBall.questionAnswer("Will I ever learn JS?");
 
 // Event Listener
 button.addEventListener('click', askQuestion);
