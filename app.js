@@ -2,6 +2,7 @@
 
 var question;
 var button = document.getElementById('question-btn');
+var answer = document.getElementById('answer');
 
 // magicEightBall Object, properties, and methods
 
@@ -14,6 +15,7 @@ magicEightBall.provideAnswer = function(question) {
 	var randomAnswer = this.answerList[randomIndex];
 	console.log(question);
 	console.log(randomAnswer);
+	answer.innerText = randomAnswer;
 };
 
 var askQuestion = function () {
