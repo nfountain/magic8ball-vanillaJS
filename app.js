@@ -60,8 +60,8 @@ var rmvClass = function(element, className) {
 var askQuestion = function () {
 	// reset to original load:
 	answer.style.visibility = 'hidden';
-
-	// on.click prompt with "Ask me your question", and after prompt shake ball, flip, reveal answer.
+	image.src = ('https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png');
+	// button.on.click prompt with "Ask me your question", and after prompt shake ball, flip, reveal answer.
 	question = prompt('Ask me your question');
 	magicEightBall.provideAnswer(question);
 	console.log("this is when shaking will happen if I put it in the code here");
