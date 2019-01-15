@@ -3,6 +3,13 @@
 var question;
 var button = document.getElementById('question-btn');
 var answer = document.getElementById('answer');
+var image = document.getElementById('magicball');
+var imgElement = document.querySelector('img');
+var imgSrc = ('https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png');
+image.src = imgSrc;
+
+// hide answer text at beginning
+answer.style.visibility = 'hidden';
 
 // magicEightBall Object, properties, and methods
 
@@ -18,11 +25,57 @@ magicEightBall.provideAnswer = function(question) {
 	answer.innerText = randomAnswer;
 };
 
-// Game function
+// Game functions
+
+var chkClass = function(element, className) {
+	if (element.classList.contains(className)) {
+		shakes = true;
+	}
+	else {
+		shakes = false;
+	}
+	console.log(element.classList);
+};
+
+chkClass(imgElement, 'shaking');
+
+var addClass = function(element, className) {
+	if (shakes === false) {
+		element.classList.add(className);
+		console.log(element.classList);
+	}
+};
+
+//addClass(imgElement, 'shaking');
+
+var rmvClass = function(element, className) {
+	if (shakes === false) {
+		element.classList.remove(className);
+		console.log(element.classList);
+	}
+};
+
+//rmvClass(imgElement, 'shaking');
 
 var askQuestion = function () {
+	// reset to original load:
+	answer.style.visibility = 'hidden';
+
+	// on.click prompt with "Ask me your question", and after prompt shake ball, flip, reveal answer.
 	question = prompt('Ask me your question');
 	magicEightBall.provideAnswer(question);
+	console.log("this is when shaking will happen if I put it in the code here");
+	addClass(imgElement, 'shaking');
+	setTimeout(function() {
+		rmvClass(imgElement, 'shaking');
+	}, 1500);
+	setTimeout( function () {
+		image.src = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/answerside.png";
+		//show answer
+		answer.style.visibility = 'visible';
+		//fadein answer
+		//answer.fadeIn(3000);
+	}, 1550);
 };
 
 // Event Listener
