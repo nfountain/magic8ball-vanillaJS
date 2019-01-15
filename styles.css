@@ -84,11 +84,11 @@ header {
 
 #answer {
     text-align: center;
+    width: 12%;
+    position: fixed;
+    top: 400px;
+    left: 518px;
     /* the following code is from SkillCrush: */
-    position: relative;
-    width:14%;
-    top:50%;
-    left:50%;
     margin-top:-60px;
     margin-left:-65px;
     font: 16px 'Open Sans', Helvetica, Arial, sans-serif;
