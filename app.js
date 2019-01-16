@@ -29,10 +29,10 @@ magicEightBall.provideAnswer = function(question) {
 
 var chkClass = function(element, className) {
 	if (element.classList.contains(className)) {
-		shakes = true;
+		hasClass = true;
 	}
 	else {
-		shakes = false;
+		hasClass = false;
 	}
 	console.log(element.classList);
 };
@@ -40,7 +40,7 @@ var chkClass = function(element, className) {
 chkClass(imgElement, 'shaking');
 
 var addClass = function(element, className) {
-	if (shakes === false) {
+	if (hasClass === false) {
 		element.classList.add(className);
 		console.log(element.classList);
 	}
@@ -49,7 +49,7 @@ var addClass = function(element, className) {
 //addClass(imgElement, 'shaking');
 
 var rmvClass = function(element, className) {
-	if (shakes === false) {
+	if (hasClass === true) {
 		element.classList.remove(className);
 		console.log(element.classList);
 	}
