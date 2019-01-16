@@ -86,7 +86,7 @@ header {
     text-align: center;
     opacity: 1;
     width: 12%;
-    position: fixed;
+    position: absolute;
     top: 400px;
     left: 518px;
     /* the following code is from SkillCrush: */
