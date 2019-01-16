@@ -9,7 +9,7 @@ var imgSrc = ('https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-conte
 image.src = imgSrc;
 
 // hide answer text at beginning
-answer.style.visibility = 'hidden';
+answer.style.opacity = '0';
 
 // magicEightBall Object, properties, and methods
 
@@ -49,7 +49,7 @@ var addClass = function(element, className) {
 //addClass(imgElement, 'shaking');
 
 var rmvClass = function(element, className) {
-	if (hasClass === true) {
+	if (hasClass === false) {
 		element.classList.remove(className);
 		console.log(element.classList);
 	}
@@ -59,8 +59,9 @@ var rmvClass = function(element, className) {
 
 var askQuestion = function () {
 	// reset to original load:
-	answer.style.visibility = 'hidden';
+	answer.style.opacity = '0';
 	image.src = ('https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png');
+	rmvClass(answer, 'fadein');
 	// button.on.click prompt with "Ask me your question", and after prompt shake ball, flip, reveal answer.
 	question = prompt('Ask me your question');
 	magicEightBall.provideAnswer(question);
@@ -71,11 +72,10 @@ var askQuestion = function () {
 	}, 1500);
 	setTimeout( function () {
 		image.src = "https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/answerside.png";
-		//show answer
-		answer.style.visibility = 'visible';
-		//fadein answer
-		//answer.fadeIn(3000);
-	}, 1550);
+		//show answer by fading the answer in
+		answer.style.opacity = "1";
+		addClass(answer, 'fadein');
+	}, 1500);
 };
 
 // Event Listener

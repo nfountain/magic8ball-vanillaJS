@@ -84,6 +84,7 @@ header {
 
 #answer {
     text-align: center;
+    opacity: 1;
     width: 12%;
     position: fixed;
     top: 400px;
@@ -94,6 +95,13 @@ header {
     font: 16px 'Open Sans', Helvetica, Arial, sans-serif;
     color: #222;
     text-transform: uppercase;
+}
+
+.fadein {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 3000ms;
+    transition-timing-function: ease-in;
 }
 
 question-btn {
