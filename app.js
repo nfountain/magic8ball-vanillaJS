@@ -7,8 +7,12 @@ var image = document.getElementById('magicball');
 var imgElement = document.querySelector('img');
 var imgSrc = ('https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png');
 image.src = imgSrc;
+var chkClass;
+var hasClass;
+var addClass;
+var rmvClass;
 
-// hide answer text at beginning
+// hide answer text at beginning (use opacity instead of visibility(hidden/visible) because opacity will be manipulated later in the game)
 answer.style.opacity = '0';
 
 // magicEightBall Object, properties, and methods
@@ -46,8 +50,6 @@ var addClass = function(element, className) {
 	}
 };
 
-//addClass(imgElement, 'shaking');
-
 var rmvClass = function(element, className) {
 	if (hasClass === false) {
 		element.classList.remove(className);
@@ -55,14 +57,12 @@ var rmvClass = function(element, className) {
 	}
 };
 
-//rmvClass(imgElement, 'shaking');
-
 var askQuestion = function () {
 	// reset to original load:
 	answer.style.opacity = '0';
 	image.src = ('https://s3.amazonaws.com/media.skillcrush.com/skillcrush/wp-content/uploads/2016/09/magic8ballQuestion.png');
 	rmvClass(answer, 'fadein');
-	// button.on.click prompt with "Ask me your question", and after prompt shake ball, flip, reveal answer.
+	// start question/answer process
 	question = prompt('Ask me your question');
 	magicEightBall.provideAnswer(question);
 	console.log("this is when shaking will happen if I put it in the code here");
